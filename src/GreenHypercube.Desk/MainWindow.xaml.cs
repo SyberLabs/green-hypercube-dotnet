@@ -29,7 +29,8 @@ public partial class MainWindow : Window
 
         try
         {
-            var results = await Task.Run(() => StudyScenarios.RunDemonstration(progress));
+            // RunDemonstration is lazy. ToList forces the work onto this Task, not the UI thread.
+            var results = await Task.Run(() => StudyScenarios.RunDemonstration(progress).ToList());
             foreach (var row in results)
             {
                 _rows.Add(new RowVm(
