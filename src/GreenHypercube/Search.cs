@@ -1,7 +1,7 @@
 namespace GreenHypercube;
 
 /// <summary>
-/// Pays for assay draws. Exposes <see cref="Cues"/> only — no reward vector,
+/// Pays for assay draws. Exposes <see cref="Cues"/> only: no reward vector,
 /// no effort index, no vault.
 /// </summary>
 public sealed class SearchEnvironment
