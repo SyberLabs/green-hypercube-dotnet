@@ -1,7 +1,9 @@
 using GreenHypercube;
 
 Console.WriteLine("Green Hypercube (.NET)");
-Console.WriteLine("AUDC advantage of sensory over random. Mean and Wald 95% CI over independent landscapes.");
+Console.WriteLine(
+    "AUDC advantage of sensory over random. Mean and Wald 95% CI over {0} landscapes.",
+    StudyScenarios.Demonstration[0].Spec.Landscapes);
 Console.WriteLine();
 
 foreach (var row in StudyScenarios.RunDemonstration())

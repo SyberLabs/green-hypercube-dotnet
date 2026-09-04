@@ -30,10 +30,9 @@ public static class StudyScenarios
         new("mirage, global shuffle", Spec(0.0, effort: 0.95, cueFromEffort: 0.9), NullKind.PermuteReward),
     ];
 
-    public static IReadOnlyList<StudyScenarioResult> RunDemonstration(
+    public static IEnumerable<StudyScenarioResult> RunDemonstration(
         IProgress<StudyProgress>? progress = null)
     {
-        var results = new List<StudyScenarioResult>(Demonstration.Count);
         var total = Demonstration.Sum(scenario => scenario.Spec.Landscapes);
         var offset = 0;
 
@@ -43,11 +42,9 @@ public static class StudyScenarios
                 ? null
                 : new OffsetProgress(progress, offset, total);
             var result = Study.SensoryAdvantage(scenario.Spec, scenario.NullKind, slice);
-            results.Add(new StudyScenarioResult(scenario.Label, result));
             offset += scenario.Spec.Landscapes;
+            yield return new StudyScenarioResult(scenario.Label, result);
         }
-
-        return results;
     }
 
     private static StudySpec Spec(double signal, double effort = 0.5, double cueFromEffort = 0) => new()
