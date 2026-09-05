@@ -50,10 +50,10 @@ The CLI prints the mean area-under-discovery-curve advantage of sensory search o
 
 ## Solution structure
 
-- `src/GreenHypercube` — domain model, deterministic random streams, search engine, null models, and study scenarios.
-- `src/GreenHypercube.Cli` — smallest reproducible demonstration.
-- `src/GreenHypercube.Desk` — WPF demonstration with asynchronous execution and progress reporting.
-- `tests/GreenHypercube.Tests` — deterministic-stream, assay-boundary, null-model, and study-invariant tests.
+- `src/GreenHypercube` - domain model, deterministic random streams, search engine, null models, and study scenarios.
+- `src/GreenHypercube.Cli` - smallest reproducible demonstration.
+- `src/GreenHypercube.Desk` - WPF demonstration with asynchronous execution and progress reporting.
+- `tests/GreenHypercube.Tests` - deterministic-stream, assay-boundary, null-model, and study-invariant tests.
 
 ## Design decisions worth reviewing
 
