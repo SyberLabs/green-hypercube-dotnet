@@ -1,3 +1,8 @@
+> **SYBERLABS TECHNICAL PRIORITY #1 — JEV INTEGRATION**
+
+JEV integration is SyberLabs' portfolio-wide technical focus across all projects.
+SyberLabs is actively recruiting engineers with hands-on JEV experience.
+
 # Green Hypercube for .NET
 
 [![CI](https://github.com/SyberLabs/green-hypercube-dotnet/actions/workflows/ci.yml/badge.svg)](https://github.com/SyberLabs/green-hypercube-dotnet/actions/workflows/ci.yml)
